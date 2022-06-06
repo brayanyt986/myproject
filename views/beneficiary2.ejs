@@ -1,0 +1,411 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eDonate - An Online Charity Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Licorice&family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"  />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Licorice", cursive;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+     
+      #header {
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)
+          ),
+          url(https://www.savethechildren.in/wp-content/uploads/2021/10/Artboard-2-1.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        scroll-behavior: smooth;
+      }
+      nav {
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav img {
+        position: relative;
+    top: -22px;
+    left: -76px;
+    width: 65px;
+    width: 11%;
+      }
+      .nav-links {
+        flex: 1;
+        text-align: right;
+        position: relative;
+        top: -36px;
+        right: 40px;
+      }
+
+      .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+      }
+      .nav-links ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      /* .header a{
+            position: relative;
+            height: 20px;
+            width: 25%;
+        } */
+
+      .nav-links ul li::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+        transition: 1s;
+      }
+
+      
+      .nav-links ul li:hover:after {
+        width: 100%;
+        transition: 0.5s;
+      }
+
+      .log {
+        position: relative;
+        float: right;
+        top: -648px;
+        right: 23px;
+        width: 91px;
+        height: 31px;
+        border-radius: 20px;
+      }
+
+      .log:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 0.5s;
+      }
+     
+
+      .person{
+        position: absolute;
+    /* border: solid; */
+    top: 12%;
+    width: 68.5%;
+    text-align: center;
+    height: 140px;
+    left: 214px;
+    right: 254px;
+    background-color: #e5c9a2;
+    border-radius: 10px;
+      }
+
+      .req{
+        position: absolute;
+    /* border: solid; */
+    top: 35%;
+    /* left: 2%; */
+    /* width: 95%; */
+    width: 68.5%;
+    text-align: center;
+    height: 378px;
+    left: 214px;
+    right: 254px;
+    background-color: #e3c988;
+    border-radius: 10px;
+      }
+
+      .username{
+        height: 55px;
+    position: absolute;
+    left: 13%;
+    top: 43%;
+      }
+
+      .number{
+        height: 55px;
+    right: 80px;
+    position: absolute;
+    top: 43%;
+      }
+
+      .clothes{
+        position: absolute;
+    height: 50px;
+    top: 19%;
+    left: 1%;
+      }
+      .bed{
+        position: absolute;
+    height: 50px;
+    top: 19%;
+    right: 5%;
+      }
+      .stationary{
+        position: absolute;
+    height: 50px;
+    top: 74%;
+    right: 4%;
+      }
+      .fruits{
+        position: absolute;
+    height: 50px;
+    top: 47%;
+    left: 2%;
+      }
+      .shoes{
+        position: absolute;
+    height: 50px;
+    top: 19%;
+    left: 35%;
+
+      }
+      .cleaning{
+        position: absolute;
+    height: 50px;
+    top: 74%;
+    left: 28%;
+      }
+      .first{
+        position: absolute;
+    height: 50px;
+    top: 47%;
+    left: 30%;
+      }
+      .books{
+        position: absolute;
+    height: 50px;
+    top: 47%;
+    left: 72%;
+      }
+      .bags{
+        position: absolute;
+    height: 50px;
+    top: 74%;
+    left: 22px;
+      }
+
+      .proceed{
+        position: absolute;
+    top: 95%;
+    height: 55px;
+    left: 50%;
+      }
+
+      .proceed button{
+        height: 27px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: #e19d11;
+    position: absolute;
+    left: -53px;
+      }
+
+      footer{
+  background-color: white;
+  padding: 40px 0px;
+}
+
+footer .social{
+  text-align: center;
+  padding-bottom: 25px;
+  color: #4b4c4d;
+
+}
+
+footer .social a{
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid rgba(233, 233, 233, 0.8);
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+footer ul{
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+footer ul a{
+   color: inherit;
+   text-decoration: none;
+   opacity: 0.8;
+
+
+}
+
+footer ul li{
+  display: inline-block;
+  padding: 0px 15px;
+}
+ footer .copyright{
+   margin-top: 15px;
+   text-align: center;
+   font-size: 13px;
+ }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+      <section id="header">
+        <!-- <a href="home1.html"><img src="./logo1.png"></a> -->
+        <nav>
+          <a href="home1.html"><img src="https://img.favpng.com/7/9/19/circle-design-png-favpng-8U22472KDQBadVjiE8Hy4X8Ly.jpg"" /></a>
+          <div class="nav-links">
+            <ul>
+              <li><a href="#header">HOME</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#team">TEAM</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+              <!-- <li><a href="">LOGIN</a></li> -->
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <% if (user) { %>
+      <a href="/auth/logout"><button class="log">Logout</button></a>
+      <% } else { %>
+      <a href="/auth/login"><button class="log">Login</button></a>
+      <% } %>
+
+      <div class="person">
+            <h4>Personal Details</h4>
+            <form>
+              <div class="username">
+              <label for="fname">Name: </label>
+              <input type="text" id="fname" name="fname" >
+            </div>
+
+            <div class="number">
+              <label for="fnumber">Contact Number: </label>
+              <input type= "tel" id="fnumber" name="fnumber" >
+            </div>
+            </form>
+     </div>
+
+     <div class="req">
+            <h4>Details of Requirements</h4>
+            <form>
+              <div class="Clothes">
+              <label for="fcloth">Clothes: </label>
+              <input type="number" id="fcloth" name="fcloth" size="25" >
+            </div>
+
+            <div class="Bed">
+              <label for="fbed">Blankets: </label>
+              <input type= "number" id="fbed" name="fbed" size="25" >
+            </div>
+
+            <div class="Stationary">
+              <label for="fstationary">Stationary-items:  </label>
+              <input type="number" id="fstationary" name="fstationary" size="10px" >
+              </div>
+
+              <div class="fruits">
+                <label for="fruit">Fruits:  </label>
+                <input type="number" id="fruits" name="fruits" size="25" >
+                </div>
+
+                <div class="Shoes">
+                  <label for="fshoe">Sandals:  </label>
+                  <input type="number" id="fshoe" name="fshoe" size="25" >
+                  </div>
+
+                  <div class="cleaning">
+                    <label for="fclean">Cleaning Utilities:  </label>
+                    <input type="number" id="fclean" name="fclean" size="25" >
+                    </div>
+
+                    <div class="first">
+                      <label for="first">First-aid items:   </label>
+                      <input type="number" id="first" name="first" size="25" >
+                      </div>
+      
+                      <div class="Books">
+                        <label for="fbooks">Books:  </label>
+                        <input type="number" id="fbook" name="fbooks" size="25" >
+                        </div>
+      
+                        <div class="Bags">
+                          <label for="fbag">Bags:  </label>
+                          <input type="number" id="fbag" name="fbag" size="10px" >
+                          </div>
+            </form>
+      </div>
+
+      <div class="proceed">
+          <a href="/profile/ben3"><button>Proceed</button></a>
+      </div>
+
+      <footer>
+        <div class="social">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-snapchat"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+   
+        <ul class="list">
+          <li>
+                <a href="#">Home</a>
+          </li>
+          <li>
+                <a href="#">Services</a>
+          </li>
+          <li>
+                <a href="#">About</a>
+          </li>
+          <li>
+           <a href="#">Terms</a>
+        </li>
+        <li>
+       <a href="#">Privacy Policy</a>
+          </li>
+   
+          <p class="copyright">
+            eDonate Inc 2022
+          </p>
+   
+   
+   
+   
+        </ul>
+   
+   
+   
+   
+       </footer>
+
+     </body>
+</html>

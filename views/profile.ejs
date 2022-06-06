@@ -1,0 +1,327 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eDonate - An Online Charity Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Licorice&family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"  />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Licorice", cursive;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      #header {
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)
+          ),
+          url(https://www.savethechildren.in/wp-content/uploads/2021/10/Artboard-2-1.jpg);
+        background-position: center;
+        background-size: 100%;
+        position: relative;
+        scroll-behavior: smooth;
+      }
+      nav {
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav img {
+        position: relative;
+    top: -22px;
+    left: -76px;
+    width: 65px;
+    width: 11%;
+      }
+      .nav-links {
+        flex: 1;
+        text-align: right;
+        position: relative;
+        top: -36px;
+        right: 40px;
+      }
+
+      .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+      }
+      .nav-links ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      /* .header a{
+            position: relative;
+            height: 20px;
+            width: 25%;
+        } */
+
+      .nav-links ul li::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+        transition: 1s;
+      }
+      .nav-links ul li:hover:after {
+        width: 100%;
+        transition: 0.5s;
+      }
+
+      .log {
+        position: relative;
+        float: right;
+        top: -670px;
+        right: 23px;
+        width: 91px;
+        height: 31px;
+        border-radius: 20px;
+      }
+
+      .log:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 0.5s;
+      }
+
+      button {
+        background: #fdc196;
+        width: 100px;
+        border: none;
+        outline: none;
+        height: 35px;
+        border-radius: 30px;
+        margin-top: 20px;
+        box-shadow: 0px 5px 15px 0px rgba(234, 34, 8, 0.3);
+      }
+      .container {
+        position: absolute;
+    background-color: white;
+    height: 332px;
+    width: 500px;
+    top: 119px;
+    left: 141px;
+    width: 82%;
+    border-radius: 10px;
+      }
+
+      .container h1 {
+        text-align: center;
+      }
+
+      .terms {
+        position: absolute;
+    height: 133px;
+    width: 97%;
+    /* border: solid; */
+    top: 56px;
+    left: 16px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+      }
+
+      .terms p {
+        position: absolute;
+    height: 50px;
+    top: 160px;
+    /* text-align: center; */
+    left: 261px;
+      }
+
+     /* #donor{
+        height: 20px;
+        position: absolute;
+    }
+
+     #beneficiary{
+        height: 20px;
+        position: absolute;
+    } */
+
+   .donor{
+    position: absolute;
+    top: 239px;
+    left: 35%;
+
+   }
+
+   .beneficiary{
+    position: absolute;
+    top: 238px;
+    left: 53%;
+
+   }
+    footer{
+  background-color: white;
+  padding: 40px 0px;
+}
+
+footer .social{
+  text-align: center;
+  padding-bottom: 25px;
+  color: #4b4c4d;
+
+}
+
+footer .social a{
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid rgba(233, 233, 233, 0.8);
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+footer ul{
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+footer ul a{
+   color: inherit;
+   text-decoration: none;
+   opacity: 0.8;
+
+
+}
+
+footer ul li{
+  display: inline-block;
+  padding: 0px 15px;
+}
+ footer .copyright{
+   margin-top: 15px;
+   text-align: center;
+   font-size: 13px;
+ }
+
+
+   
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+    <section id="header">
+      <!-- <a href="home1.html"><img src="./logo1.png"></a> -->
+      <nav>
+        <a href="home1.html"><img src="https://img.favpng.com/7/9/19/circle-design-png-favpng-8U22472KDQBadVjiE8Hy4X8Ly.jpg"" /></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="./home.ejs#header">HOME</a></li>
+            <li><a href="./home.ejs#about">ABOUT</a></li>
+            <li><a href="./home.ejs#team">TEAM</a></li>
+            <li><a href="./home.ejs#contact">CONTACT</a></li>
+            <!-- <li><a href="">LOGIN</a></li> -->
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <% if (user) { %>
+      <a href="/auth/logout"><button class="log">Logout</button></a>
+      <% } else { %>
+      <a href="/auth/login"><button class="log">Login</button></a>
+      <% } %>
+    <div class="container">
+      <!-- <img src=" background-image: url(https://cdn.wallpapersafari.com/17/5/Zd3rxI.jpg);" alt=""> -->
+      <h1>Welcome to your profile, <%= user.username %></h1>
+      <!-- <img src="<%=user.thumbnail %>" /> -->
+
+      <div class="terms">
+        <h4>Terms and conditions</h4>
+        <ul style="list-style-type: square; list-style-position: inside">
+          <li>
+            The donor is allowed to provide help only in the form of goods and
+            not money
+          </li>
+          <li>
+            Donation or listing of illegal substances is strictly prohibited
+          </li>
+          <li>
+            The beneficiary needs to provide credibility by providing licensed
+            documents failing which they won't be allowed to continue further
+          </li>
+          <li>Any breach of conduct will lead to serious actions</li>
+        </ul>
+        <p>To continue please register yourself as a donor or beneficiary</p>
+      </div>
+
+      <!-- <button id="donor">Donor</button>
+      <button id="beneficiary">Beneficiary</button> -->
+
+     <div class="donor">
+         <a href="/profile/don1"><button>Donor</button></a>
+     </div>
+
+     <div class="beneficiary">
+        <a href="/profile/ben1"><button>Beneficiary</button></a>
+    </div>
+      
+    </div>
+
+    <footer>
+      <div class="social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-snapchat"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+ 
+      <ul class="list">
+        <li>
+              <a href="#">Home</a>
+        </li>
+        <li>
+              <a href="#">Services</a>
+        </li>
+        <li>
+              <a href="#">About</a>
+        </li>
+        <li>
+         <a href="#">Terms</a>
+      </li>
+      <li>
+     <a href="#">Privacy Policy</a>
+        </li>
+ 
+        <p class="copyright">
+          eDonate Inc 2022
+        </p>
+ 
+ 
+ 
+ 
+      </ul>
+ 
+ 
+ 
+ 
+     </footer>
+  </body>
+</html>

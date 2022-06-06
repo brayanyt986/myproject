@@ -1,0 +1,581 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eDonate - An Online Charity Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Licorice&family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Licorice", cursive;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+      }
+
+     
+      #header {
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(4, 9, 30, 0.7),
+            rgba(4, 9, 30, 0.7)
+          ),
+          url(https://www.savethechildren.in/wp-content/uploads/2021/10/Artboard-2-1.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        scroll-behavior: smooth;
+      }
+      nav {
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav img {
+    position: relative;
+    top: -22px;
+    left: -76px;
+    width: 65px;
+    width: 11%;
+      }
+      .nav-links {
+        flex: 1;
+        text-align: right;
+        position: relative;
+        top: -36px;
+        right: 40px;
+      }
+
+      .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+      }
+      .nav-links ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      /* .header a{
+            position: relative;
+            height: 20px;
+            width: 25%;
+        } */
+
+      .nav-links ul li::after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #f44336;
+        display: block;
+        margin: auto;
+        transition: 1s;
+      }
+      .nav-links ul li:hover:after {
+        width: 100%;
+        transition: 0.5s;
+      }
+
+      .log {
+        position: relative;
+        float: right;
+        top: -670px;
+        right: 23px;
+        width: 91px;
+        height: 31px;
+        border-radius: 20px;
+      }
+
+      .log:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 0.5s;
+      }
+      .text-box {
+        width: 90%;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .text-box h1 {
+        font-size: 62px;
+      }
+
+      .text-box p {
+        margin: -14px 0px 40px;
+        font-size: 16px;
+        color: white;
+      }
+
+      .hero-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+        top: -25px;
+      }
+
+      .hero-btn:hover {
+        border: 1px solid #f44336;
+        background: #f44336;
+        transition: 1s;
+      }
+
+      #about {
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        padding-top: 17px;
+        padding-bottom: 40px;
+        transition: 0.5s;
+      }
+
+      h1 {
+        font-size: 31px;
+        font-weight: 600;
+      }
+      .row {
+        background-color: #ffd68c;
+        top: 12px;
+        bottom: 40px;
+        width: 93%;
+        margin: auto;
+        margin-top: 1%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 15px;
+        /* border-width: 3px; */
+        /* border-style: solid; */
+        /* border-color: #8d1b1b; */
+        line-height: 30px;
+      }
+
+      .row:hover {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      #team {
+        background-color: rgb(255, 255, 255);
+    width: 98%;
+    margin: auto;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 17px;
+    height: 770px;
+    border-width: 3px;
+    /* border-style: solid;
+    border-color: #8d1b1b; */
+    margin-top: 0%;
+    transition: 1s;
+    
+      }
+
+      .row2{
+        margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    height: 55%;
+    
+   
+      }
+      .row1{
+        margin-left: 2%;
+    margin-right: 2%;
+    flex-basis: 31%;
+    background: #eef3a2;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+      }
+      .row3{
+        margin: auto;
+    margin-top: -25px;
+    /* padding: 5px 377px; */
+    background: #eef3a2;
+    height: 304px;
+    width: 388px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+     }
+
+     .row1 img{
+       position: absolute;
+       width: 30%;
+     }
+
+     #a{
+      top: 1052px;
+    position: absolute;
+    height: 232px;
+    width: 189px;
+    left: 131px;
+     }
+     #b{
+      position: absolute;
+    height: 225px;
+    width: 199px;
+    left: 43%;
+     }
+     #c{
+      top: 1031px;
+    position: absolute;
+    height: 232px;
+    width: 194px;
+    right: 143px;
+     }
+
+     #d{
+      top: 1017px;
+    position: absolute;
+    height: 232px;
+    width: 194px;
+    right: 143px;
+     }
+
+     .text1{
+      background: #eef3a2;
+    position: absolute;
+    height: 8%;
+    left: 157px;
+    top: 1290px;
+     }
+     .text2{
+      background: #eef3a2;
+    position: absolute;
+    height: 8%;
+    left: 620px;
+    top: 1284px;
+     }
+     .text3{
+      background: #eef3a2;
+    position: absolute;
+    height: 9%;
+    right: 189px;
+    top: 1289px;
+     }
+     .text4{
+      background: #eef3a2;
+    position: absolute;
+    height: 9%;
+    right: 596px;
+    top: 250%;
+
+     }
+
+    .container{
+      width: 80%;
+      /* height: 100%; */
+      margin: 50px auto;
+    }
+
+    .container h1{
+      text-align: center;
+      margin-top: -2%;
+    }
+
+    .contact-box{
+      display: flex;
+
+    }
+
+    .contact-left{
+      flex-basis: 60%;
+      padding: 40px 60px;
+      background: #fbfbfb;
+    }
+
+    .contact-right{
+      flex-basis: 40%;
+    padding: 40px;
+    background: #fdc196;
+    color: #c54f4f;
+    }
+
+    .container h1{
+      margin-block: 10px;
+    }
+    .container p{
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .input-row{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .input-row .input-group{
+      flex-basis: 45%;
+    }
+
+    input{
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      outline: none;
+      padding-bottom: 5px;
+    }
+
+    textarea{
+      width: 100%;
+      outline: none;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    label{
+      margin-bottom: 5%;
+      display: block;
+      color: #000000;
+    }
+
+    button{
+      background:#fdc196;
+      width: 100px;
+      border: none;
+      outline: none;
+      height: 35px;
+      border-radius: 30px;
+      margin-top: 20px;
+      box-shadow: 0px 5px 15px 0px rgba(234, 34, 8, 0.3);
+    }
+
+    .contact-left h3{
+     color: #c54f4f;
+     font-weight: 600;
+     margin-bottom: 30px;
+    }
+
+    tr td:first-child{
+      padding-right: 20px;
+    }
+
+    tr td{
+      padding-top: 20px;
+    }
+
+    .footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+#d{
+  position: absolute;
+    top: 216%;
+    left: 578px;
+    height: 214px;
+}
+
+
+footer{
+  background-color: white;
+  padding: 40px 0px;
+}
+
+footer .social{
+  text-align: center;
+  padding-bottom: 25px;
+  color: #4b4c4d;
+
+}
+
+footer .social a{
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid rgba(233, 233, 233, 0.8);
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  opacity: 0.75;
+}
+
+footer ul{
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+footer ul a{
+   color: inherit;
+   text-decoration: none;
+   opacity: 0.8;
+
+
+}
+
+footer ul li{
+  display: inline-block;
+  padding: 0px 15px;
+}
+ footer .copyright{
+   margin-top: 15px;
+   text-align: center;
+   font-size: 13px;
+ }
+
+
+ .final{
+    position: absolute;
+    height: 55px;
+    top: 26%;
+    left: 25%;
+    color: white;
+    border-radius: 10px;
+    border: solid;
+    background-color: #837446;
+    width: 48%;
+    text-align: center;
+ }
+
+
+     
+    </style>
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+      <section id="header">
+        <!-- <a href="home1.html"><img src="./logo1.png"></a> -->
+        <nav>
+          <a href="home1.html"><img src="https://img.favpng.com/7/9/19/circle-design-png-favpng-8U22472KDQBadVjiE8Hy4X8Ly.jpg" /></a>
+          <div class="nav-links">
+            <ul>
+              <li><a href="#header">HOME</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#team">TEAM</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+              <!-- <li><a href="">LOGIN</a></li> -->
+            </ul>
+          </div>
+        </nav>
+      </section>
+      <% if (user) { %>
+      <a href="/auth/logout"><button class="log">Logout</button></a>
+      <% } else { %>
+      <a href="/auth/login"><button class="log">Login</button></a>
+      <% } %>
+
+     <div class="final">
+       <h3>Congratulations! Your requirements have been listed</h3>
+    </div>
+
+
+    <footer>
+     <div class="social">
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-snapchat"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-facebook"></i></a>
+     </div>
+
+     <ul class="list">
+       <li>
+             <a href="#">Home</a>
+       </li>
+       <li>
+             <a href="#">Services</a>
+       </li>
+       <li>
+             <a href="#">About</a>
+       </li>
+       <li>
+        <a href="#">Terms</a>
+     </li>
+     <li>
+    <a href="#">Privacy Policy</a>
+       </li>
+
+       <p class="copyright">
+         eDonate Inc 2022
+       </p>
+
+
+
+
+     </ul>
+
+
+
+
+    </footer>
+    
+  </body>
+</html>
